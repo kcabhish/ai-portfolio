@@ -2,7 +2,7 @@ import { act, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { navigation } from '../../data/navigation';
 import { setMediaQuery } from '../../test/matchMedia';
-import { SiteHeader } from './SiteHeader';
+import { RAIL_QUERY, SiteHeader } from './SiteHeader';
 
 function renderHeader() {
   render(<SiteHeader name="Abhishek KC" items={navigation} />);
@@ -57,12 +57,12 @@ describe('SiteHeader', () => {
     expect(menuButton).toHaveAttribute('aria-expanded', 'false');
   });
 
-  it('closes when the viewport grows to the desktop layout', async () => {
+  it('closes when the viewport grows to the section rail layout', async () => {
     const user = userEvent.setup();
     const { menuButton } = renderHeader();
 
     await user.click(menuButton);
-    act(() => setMediaQuery('(width >= 56rem)', true));
+    act(() => setMediaQuery(RAIL_QUERY, true));
 
     expect(menuButton).toHaveAttribute('aria-expanded', 'false');
   });

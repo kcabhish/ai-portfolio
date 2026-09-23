@@ -113,23 +113,9 @@
   text-decoration: none;
 }
 
-@media (width >= 56rem) {
-  .menuButton {
+/* From tablet width up, the section rail replaces the header menu. */
+@media (width >= 48rem) {
+  .nav {
     display: none;
-  }
-
-  .list,
-  .list[data-open='true'] {
-    position: static;
-    display: flex;
-    gap: var(--spacing-2xs);
-    padding: 0;
-    background: none;
-    border: 0;
-    box-shadow: none;
-  }
-
-  .link {
-    padding: var(--spacing-xs) var(--spacing-sm);
   }
 }

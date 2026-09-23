@@ -37,14 +37,14 @@ export function Hero({ profile, experience }: HeroProps) {
 
         <div className={styles.actions}>
           <ButtonLink href="#work">View my work</ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href={profile.resume.href}
             download={profile.resume.fileName}
             variant="secondary"
           >
             Download resume
             <span className="visually-hidden"> (PDF)</span>
-          </ButtonLink>
+          </ButtonLink> */}
           <ButtonLink href="#contact" variant="secondary">
             Let’s connect
           </ButtonLink>
@@ -66,7 +66,7 @@ export function Hero({ profile, experience }: HeroProps) {
             ) : null}
             <div>
               <dt>Focus</dt>
-              <dd>Frontend architecture, accessibility, performance, AI integration</dd>
+              <dd>{profile.focus}</dd>
             </div>
           </dl>
         ) : null}

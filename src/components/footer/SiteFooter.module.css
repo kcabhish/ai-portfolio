@@ -1,6 +1,7 @@
 .footer {
   border-block-start: 1px solid var(--color-border);
   padding-block: var(--spacing-xl);
+  padding-inline-start: var(--rail-offset);
 }
 
 .inner {

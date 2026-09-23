@@ -2,6 +2,13 @@ import type { Principle } from './types';
 
 export const principles: Principle[] = [
   {
+    title: 'Treat the model as one component of the system',
+    description:
+      'An AI feature is only as reliable as the services, interfaces, and contracts around the model, so those get the same engineering care as any other code.',
+    evidence:
+      'Full-stack Whisper services and LLM feasibility analyses at CACI, backward-compatible agentic AI adaptors at Expedia.',
+  },
+  {
     title: 'Accessibility is part of the definition of done',
     description:
       'Accessible markup, keyboard support, and contrast are designed in from the start, not audited in at the end.',
@@ -20,16 +27,11 @@ export const principles: Principle[] = [
     evidence: 'Datadog dashboards, bundle optimization, and analytics instrumentation at Expedia.',
   },
   {
-    title: 'Automate the path to production',
+    title: 'Automate verification and delivery',
     description:
-      'Reliable pipelines shorten feedback loops and make deploying a routine event rather than a risky one.',
-    evidence: 'GitHub Actions CI/CD and Jenkins with Spinnaker deployments at Expedia.',
-  },
-  {
-    title: 'Tests are part of the architecture',
-    description:
-      'Test frameworks and automation are infrastructure that lets a codebase keep changing safely.',
-    evidence: 'Jest and Enzyme framework at CGI, Selenium and Gherkin automation at UNISON.',
+      'Test automation and reliable pipelines let a codebase keep changing safely and make deploying a routine event.',
+    evidence:
+      'Jest and Enzyme framework at CGI, Selenium automation at UNISON, GitHub Actions CI/CD at Expedia.',
   },
   {
     title: 'Keep the dependency graph healthy',

@@ -2,6 +2,18 @@ import type { SkillGroup } from './types';
 
 export const skills: SkillGroup[] = [
   {
+    domain: 'AI / LLM',
+    skills: [
+      'OpenAI Whisper',
+      'LLM evaluation',
+      'Generative AI',
+      'Agentic AI',
+      'Speech-to-text',
+      'Machine translation',
+      'Language IO',
+    ],
+  },
+  {
     domain: 'Frontend',
     skills: [
       'TypeScript',
@@ -21,11 +33,7 @@ export const skills: SkillGroup[] = [
   },
   {
     domain: 'Backend',
-    skills: ['Node.js', 'Express', 'GraphQL', 'Python', 'Java', 'PHP', 'C', 'C++'],
-  },
-  {
-    domain: 'AI / LLM',
-    skills: ['LLM evaluation', 'OpenAI Whisper', 'Generative AI', 'Agentic AI', 'Language IO'],
+    skills: ['Python', 'Node.js', 'Express', 'GraphQL', 'Java', 'PHP', 'C', 'C++'],
   },
   {
     domain: 'Testing',

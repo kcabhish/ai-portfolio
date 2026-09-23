@@ -1,5 +1,6 @@
 .hero {
   padding-block: clamp(3rem, 2rem + 5vw, 5.5rem) var(--spacing-2xl);
+  padding-inline-start: var(--rail-offset);
 }
 
 .inner {
@@ -39,6 +40,28 @@
 @media (prefers-reduced-motion: reduce) {
   .inner > * {
     animation: none;
+  }
+}
+
+/* Hero content drifts up and softens as it scrolls out of view. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .inner {
+      animation: hero-exit linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+/* Opacity holds until the hero is mostly behind the header, so visible text keeps its contrast. */
+@keyframes hero-exit {
+  40% {
+    opacity: 1;
+  }
+  to {
+    translate: 0 -48px;
+    opacity: 0.5;
   }
 }
 

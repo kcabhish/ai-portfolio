@@ -18,6 +18,23 @@ export const featuredWork: FeaturedWork[] = [
     diagram: 'transcription',
   },
   {
+    id: 'generative-agentic-ai',
+    title: 'Generative and agentic AI enablement',
+    context: 'Expedia',
+    problem:
+      'Teams needed interfaces to support generative AI model training, and a way to experiment with agentic AI inside an existing framework without disrupting the applications already built on it.',
+    built:
+      'Responsive React widgets, built with the LLM team, used for training generative AI models, and adaptors that extended the internal framework for agentic AI experimentation.',
+    decisions: [
+      'Extended the framework through adaptors rather than changing its core, preserving backward compatibility for existing consumers.',
+      'Partnered directly with the LLM team so the widgets served the model training work.',
+    ],
+    outcome:
+      'Agentic AI experimentation became possible without breaking existing framework consumers.',
+    technologies: ['React', 'Generative AI', 'Agentic AI'],
+    diagram: 'ai-adaptor',
+  },
+  {
     id: 'micro-frontends',
     title: 'Micro-frontend architecture adoption',
     context: 'Expedia',

@@ -1,5 +1,6 @@
 .section {
   padding-block: var(--spacing-2xl);
+  padding-inline-start: var(--rail-offset);
   border-block-start: 1px solid var(--color-border);
 }
 

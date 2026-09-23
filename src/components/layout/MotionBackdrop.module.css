@@ -75,6 +75,65 @@
   }
 }
 
+/*
+ * Scroll parallax: each layer moves up at a different rate as the page scrolls.
+ * Uses the `translate` property so it composes with the `transform` drift above.
+ * Browsers without scroll-driven animations keep the static layout.
+ */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .grid {
+      animation: parallax-grid linear both;
+      animation-timeline: scroll(root);
+    }
+
+    .blobOne {
+      animation:
+        drift-one 40s ease-in-out infinite alternate,
+        parallax-near linear both;
+      animation-timeline: auto, scroll(root);
+    }
+
+    .blobTwo {
+      animation:
+        drift-two 52s ease-in-out infinite alternate,
+        parallax-mid linear both;
+      animation-timeline: auto, scroll(root);
+    }
+
+    .blobThree {
+      animation:
+        drift-three 64s ease-in-out infinite alternate,
+        parallax-far linear both;
+      animation-timeline: auto, scroll(root);
+    }
+  }
+}
+
+@keyframes parallax-grid {
+  to {
+    translate: 0 -8vh;
+  }
+}
+
+@keyframes parallax-near {
+  to {
+    translate: 0 -18vh;
+  }
+}
+
+@keyframes parallax-mid {
+  to {
+    translate: 0 -32vh;
+  }
+}
+
+@keyframes parallax-far {
+  to {
+    translate: 0 -48vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .blob {
     animation: none;

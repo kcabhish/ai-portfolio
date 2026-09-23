@@ -5,9 +5,9 @@
 export const site = {
   name: 'Abhishek KC',
   jobTitle: 'Senior Software Engineer',
-  title: 'Abhishek KC | Senior Software Engineer, Front-End Architect, Full-Stack & AI Engineer',
+  title: 'Abhishek KC | Senior Software Engineer, Full-Stack AI Engineer, Front-End Architect',
   description:
-    'Portfolio of Abhishek KC, a senior software engineer focused on frontend architecture, accessible and performant web applications, enterprise delivery, and AI/LLM application development.',
+    'Portfolio of Abhishek KC, a senior software engineer who builds full-stack AI features, from speech and LLM integrations to the services and accessible React interfaces around them.',
   alumniOf: 'Minnesota State University Moorhead',
   linkedin: 'https://www.linkedin.com/in/akc-a30918125',
   github: 'https://github.com/kcabhish',

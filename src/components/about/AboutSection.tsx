@@ -19,18 +19,12 @@ export function AboutSection({ profile, education }: AboutSectionProps) {
           ))}
         </div>
         <dl className={styles.glance}>
-          <div>
-            <dt>Building for the web since</dt>
-            <dd>2014</dd>
-          </div>
-          <div>
-            <dt>Core stack</dt>
-            <dd>React, Angular, TypeScript, Node.js</dd>
-          </div>
-          <div>
-            <dt>Industries</dt>
-            <dd>Government, travel, finance, e-commerce</dd>
-          </div>
+          {profile.highlights.map((highlight) => (
+            <div key={highlight.label}>
+              <dt>{highlight.label}</dt>
+              <dd>{highlight.value}</dd>
+            </div>
+          ))}
           {degree ? (
             <div>
               <dt>Education</dt>

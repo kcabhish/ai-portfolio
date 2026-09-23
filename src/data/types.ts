@@ -9,12 +9,21 @@ export interface SocialLink {
   display: string;
 }
 
+export interface Highlight {
+  label: string;
+  value: string;
+}
+
 export interface Profile {
   name: string;
   /** Roles shown in the hero, in priority order. */
   headline: string[];
   tagline: string;
+  /** One-line focus areas shown in the hero. */
+  focus: string;
   summary: string[];
+  /** Short facts shown beside the professional summary. */
+  highlights: Highlight[];
   social: SocialLink[];
   resume: {
     href: string;
@@ -45,7 +54,7 @@ export interface Experience {
   isEarlier?: boolean;
 }
 
-export type DiagramId = 'micro-frontend' | 'transcription';
+export type DiagramId = 'micro-frontend' | 'transcription' | 'ai-adaptor';
 
 export interface FeaturedWork {
   id: string;

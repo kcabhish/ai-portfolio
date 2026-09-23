@@ -44,6 +44,9 @@
   --content-width: 72rem;
   --reading-width: 44rem;
   --header-height: 4rem;
+  --rail-width: 9.5rem;
+  /* Space reserved beside page content for the section rail; 0 when there is no rail. */
+  --rail-offset: 0rem;
 
   --shadow-raised: 0 1px 2px rgb(16 24 40 / 6%), 0 4px 12px rgb(16 24 40 / 6%);
   --shadow-hover: 0 2px 4px rgb(16 24 40 / 6%), 0 12px 28px rgb(16 24 40 / 10%);
@@ -81,6 +84,25 @@
   --backdrop-blob-2: rgb(45 212 191 / 16%);
   --backdrop-blob-3: rgb(129 140 248 / 20%);
   --backdrop-grid: rgb(233 235 239 / 5%);
+}
+
+@media (width >= 48rem) {
+  :root {
+    --rail-offset: calc(var(--rail-width) + var(--spacing-lg));
+  }
+}
+
+@media (width >= 64rem) {
+  :root {
+    --rail-width: 11rem;
+  }
+}
+
+/* Wide enough that centered content already clears the rail. */
+@media (width >= 100rem) {
+  :root {
+    --rail-offset: 0rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

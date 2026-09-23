@@ -26,14 +26,27 @@ describe('App', () => {
     expect(screen.getByRole('main')).toHaveAttribute('id', 'main');
   });
 
-  it('links every resume download to the PDF in public/', () => {
+  it('does not link to the resume PDF while downloads are disabled', () => {
     render(<App />);
-    const links = screen.getAllByRole('link', { name: /download resume/i });
 
-    expect(links.length).toBeGreaterThan(0);
-    for (const link of links) {
-      expect(link).toHaveAttribute('href', `${import.meta.env.BASE_URL}${profile.resume.fileName}`);
-      expect(link).toHaveAttribute('download', profile.resume.fileName);
+    expect(screen.queryByRole('link', { name: /download resume/i })).toBeNull();
+    expect(document.body.innerHTML).not.toContain(profile.resume.fileName);
+  });
+
+  it('offers a tablet and desktop section rail covering every nav target', () => {
+    render(<App />);
+    const rail = screen.getByRole('navigation', { name: 'On this page' });
+    const railTargets = within(rail)
+      .getAllByRole('link')
+      .map((link) => link.getAttribute('href'));
+
+    for (const link of within(screen.getByRole('navigation', { name: 'Primary' })).getAllByRole(
+      'link',
+    )) {
+      expect(railTargets).toContain(link.getAttribute('href'));
+    }
+    for (const href of railTargets) {
+      expect(document.getElementById(href?.slice(1) ?? '')).not.toBeNull();
     }
   });
 

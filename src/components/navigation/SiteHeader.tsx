@@ -8,15 +8,15 @@ interface SiteHeaderProps {
   items: NavItem[];
 }
 
-/** Keep in sync with the breakpoint in `SiteHeader.module.css`. */
-const DESKTOP_QUERY = '(width >= 56rem)';
+/** Width at which the section rail takes over. Keep in sync with the CSS breakpoints. */
+export const RAIL_QUERY = '(width >= 48rem)';
 
 export function SiteHeader({ name, items }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const media = window.matchMedia(DESKTOP_QUERY);
+    const media = window.matchMedia(RAIL_QUERY);
     const onChange = (event: MediaQueryListEvent) => {
       if (event.matches) setIsOpen(false);
     };

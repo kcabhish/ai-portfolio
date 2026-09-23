@@ -14,18 +14,36 @@ Publishing rules:
 ## Profile
 
 - **Name:** Abhishek KC
-- **Headline:** Senior Software Engineer | Front-End Architect | Full-Stack & AI Engineer
+- **Headline:** Senior Software Engineer | Full-Stack AI Engineer | Front-End Architect
+- **Positioning:** Full-stack AI engineer. Integrates speech and language models into products
+  and owns the services, interfaces, and delivery around them. Frame AI work as software
+  engineering applied to AI systems; LLM work at CACI is evaluation and feasibility, not a
+  shipped LLM product.
 - **Location:** Chantilly, VA (not published on the site)
 - **LinkedIn:** https://www.linkedin.com/in/akc-a30918125
 - **GitHub:** https://github.com/kcabhish
 - **Resume:** `public/Abhishek_KC_Resume_2026.pdf`
 
+Highlights (shown beside the summary):
+
+- **Building for the web since:** 2010
+- **Core stack:** React, TypeScript, Node.js, Python
+- **AI:** OpenAI Whisper, LLM evaluation, generative and agentic AI
+- **Delivery:** GitHub Actions, AWS, Datadog
+- **Industries:** Government, travel, finance, e-commerce
+
 ## Professional Summary
 
-Senior front-end engineer with experience architecting scalable, high-performance web
-applications. Rapidly prototypes front-end solutions, implements accessibility best practices,
-and leads cross-functional teams. Builds responsive, accessible web experiences with modern
-JavaScript frameworks, and more recently applies that work to LLM and speech-model integration.
+Senior software engineer building for the web since 2010 (starting as a university web
+developer). Recent work applies full-stack engineering to AI systems: Whisper-based
+transcription and translation services and LLM evaluation at CACI; React interfaces for
+generative AI model training and backward-compatible adaptors for agentic AI experimentation at
+Expedia. Built on a long foundation of reusable, accessible React and Angular components,
+micro-frontends, analytics, CI/CD, and Node.js/Express integration.
+
+Resume summary (original wording): Experienced Senior Front-End Engineer with expertise in
+architecting scalable, high-performance web applications. Rapid prototyping, accessibility best
+practices, and leadership of cross-functional teams.
 
 ## Experience
 

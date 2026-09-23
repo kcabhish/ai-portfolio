@@ -17,6 +17,18 @@ export const architectureDiagrams: Record<DiagramId, ArchitectureDiagramData> = 
       { label: 'Backend services', detail: 'APIs the modules integrate with.' },
     ],
   },
+  'ai-adaptor': {
+    id: 'ai-adaptor',
+    title: 'Adaptor layer for agentic AI',
+    caption:
+      'A generalized view of extending an existing framework with AI capabilities through adaptors, so current consumers keep working unchanged. It does not describe any specific production system.',
+    steps: [
+      { label: 'Existing consumers', detail: 'Keep using the framework as they do today.' },
+      { label: 'Framework interface', detail: 'Stays backward compatible.' },
+      { label: 'Adaptors', detail: 'Extend the framework without changing its contract.' },
+      { label: 'Agentic AI experiments', detail: 'Plug in through the adaptors.' },
+    ],
+  },
   transcription: {
     id: 'transcription',
     title: 'Transcription and translation flow',

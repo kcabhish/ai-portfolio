@@ -7,13 +7,14 @@ export function AiEngineeringSection({ items }: { items: AiExperience[] }) {
   return (
     <Section
       id="ai"
-      eyebrow="AI engineering"
-      title="Software engineering applied to AI systems"
+      eyebrow="Full-stack AI engineering"
+      title="AI features, engineered end to end"
       tone="muted"
       intro={
         <p>
-          Everything listed here is professional work: integrating models into real products,
-          evaluating them for fit, and building the interfaces and adaptors around them.
+          Everything listed here is professional work. The model is one component of the system; the
+          engineering is in evaluating it for fit, integrating it, and owning the services,
+          interfaces, and compatibility around it.
         </p>
       }
     >

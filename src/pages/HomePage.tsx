@@ -28,10 +28,10 @@ export function HomePage() {
       <Hero profile={profile} experience={experience} />
       <AboutSection profile={profile} education={education} />
       <FeaturedWorkSection work={featuredWork} diagrams={architectureDiagrams} />
+      <AiEngineeringSection items={aiExperience} />
       <Section id="experience" eyebrow="Experience" title="Professional experience">
         <ExperienceTimeline roles={experience} />
       </Section>
-      <AiEngineeringSection items={aiExperience} />
       <ExpertiseSection groups={skills} />
       <PhilosophySection principles={principles} />
       <RecognitionSection awards={awards} education={education} />
