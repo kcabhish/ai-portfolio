@@ -1,0 +1,11 @@
+export { profile } from './profile';
+export { experience } from './experience';
+export { featuredWork } from './featuredWork';
+export { architectureDiagrams } from './architecture';
+export { aiExperience } from './aiExperience';
+export { skills } from './skills';
+export { education } from './education';
+export { awards } from './awards';
+export { principles } from './principles';
+export { projects } from './projects';
+export type * from './types';

@@ -1,0 +1,36 @@
+.section {
+  padding-block: var(--spacing-2xl);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.muted {
+  background: var(--color-surface-muted);
+}
+
+.inner {
+  inline-size: min(100% - 2 * var(--spacing-lg), var(--content-width));
+  margin-inline: auto;
+}
+
+.header {
+  display: grid;
+  gap: var(--spacing-sm);
+  max-inline-size: var(--reading-width);
+  margin-block-end: var(--spacing-xl);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.intro {
+  color: var(--color-text-secondary);
+}

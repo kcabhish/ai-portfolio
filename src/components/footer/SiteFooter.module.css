@@ -1,0 +1,19 @@
+.footer {
+  border-block-start: 1px solid var(--color-border);
+  padding-block: var(--spacing-xl);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  inline-size: min(100% - 2 * var(--spacing-lg), var(--content-width));
+  margin-inline: auto;
+}
+
+.copy {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}

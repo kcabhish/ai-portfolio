@@ -1,0 +1,30 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  min-block-size: 2.5rem;
+  min-inline-size: 2.5rem;
+  padding-inline: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--easing-standard);
+}
+
+.toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.label {
+  font-family: var(--font-mono);
+}
+
+@media (width < 30rem) {
+  .label {
+    display: none;
+  }
+}

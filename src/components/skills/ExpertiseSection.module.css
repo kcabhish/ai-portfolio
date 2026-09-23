@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: var(--spacing-xl) var(--spacing-lg);
+}
+
+.group {
+  display: grid;
+  gap: var(--spacing-sm);
+  align-content: start;
+  padding-block-start: var(--spacing-md);
+  border-block-start: 2px solid var(--color-text-primary);
+}
+
+.domain {
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
