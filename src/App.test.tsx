@@ -11,6 +11,11 @@ describe('App', () => {
     expect(headings[0]).toHaveTextContent(profile.name);
   });
 
+  it('hides the decorative motion background from assistive technology', () => {
+    render(<App />);
+    expect(screen.getByTestId('motion-backdrop')).toHaveAttribute('aria-hidden', 'true');
+  });
+
   it('offers a skip link to the main content', () => {
     render(<App />);
 

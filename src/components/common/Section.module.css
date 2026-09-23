@@ -4,7 +4,7 @@
 }
 
 .muted {
-  background: var(--color-surface-muted);
+  background: color-mix(in srgb, var(--color-surface-muted) 72%, transparent);
 }
 
 .inner {

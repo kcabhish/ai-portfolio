@@ -1,0 +1,82 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--backdrop-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--backdrop-grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 30%, transparent 100%);
+}
+
+/* Soft radial gradients instead of `filter: blur()` keep each blob cheap to composite. */
+.blob {
+  position: absolute;
+  inline-size: 70vmax;
+  block-size: 70vmax;
+  border-radius: 50%;
+  will-change: transform;
+  animation: drift-one 40s ease-in-out infinite alternate;
+}
+
+.blobOne {
+  inset-block-start: -35vmax;
+  inset-inline-start: -20vmax;
+  background: radial-gradient(circle at center, var(--backdrop-blob-1), transparent 62%);
+}
+
+.blobTwo {
+  inset-block-start: 5vh;
+  inset-inline-end: -35vmax;
+  background: radial-gradient(circle at center, var(--backdrop-blob-2), transparent 62%);
+  animation-name: drift-two;
+  animation-duration: 52s;
+}
+
+.blobThree {
+  inset-block-end: -45vmax;
+  inset-inline-start: 15vw;
+  background: radial-gradient(circle at center, var(--backdrop-blob-3), transparent 62%);
+  animation-name: drift-three;
+  animation-duration: 64s;
+}
+
+@keyframes drift-one {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(18vmax, 12vmax, 0) scale(1.15);
+  }
+}
+
+@keyframes drift-two {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  to {
+    transform: translate3d(-20vmax, 18vmax, 0) scale(0.95);
+  }
+}
+
+@keyframes drift-three {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  to {
+    transform: translate3d(14vmax, -16vmax, 0) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}

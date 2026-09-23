@@ -46,6 +46,12 @@
   --header-height: 4rem;
 
   --shadow-raised: 0 1px 2px rgb(16 24 40 / 6%), 0 4px 12px rgb(16 24 40 / 6%);
+  --shadow-hover: 0 2px 4px rgb(16 24 40 / 6%), 0 12px 28px rgb(16 24 40 / 10%);
+
+  --backdrop-blob-1: rgb(10 88 176 / 22%);
+  --backdrop-blob-2: rgb(13 148 136 / 16%);
+  --backdrop-blob-3: rgb(99 102 241 / 16%);
+  --backdrop-grid: rgb(22 24 29 / 6%);
 
   --duration-fast: 150ms;
   --duration-base: 220ms;
@@ -69,6 +75,12 @@
   --color-focus: #82b5ff;
 
   --shadow-raised: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 12px rgb(0 0 0 / 30%);
+  --shadow-hover: 0 2px 4px rgb(0 0 0 / 40%), 0 12px 28px rgb(0 0 0 / 45%);
+
+  --backdrop-blob-1: rgb(130 181 255 / 26%);
+  --backdrop-blob-2: rgb(45 212 191 / 16%);
+  --backdrop-blob-3: rgb(129 140 248 / 20%);
+  --backdrop-grid: rgb(233 235 239 / 5%);
 }
 
 @media (prefers-reduced-motion: reduce) {
