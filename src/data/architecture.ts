@@ -1,4 +1,4 @@
-import type { ArchitectureDiagramData, DiagramId } from './types';
+import type { ArchitectureDiagramData, DiagramId } from './types.ts';
 
 export const architectureDiagrams: Record<DiagramId, ArchitectureDiagramData> = {
   'micro-frontend': {

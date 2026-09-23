@@ -1,4 +1,4 @@
-import type { SkillGroup } from './types';
+import type { SkillGroup } from './types.ts';
 
 export const skills: SkillGroup[] = [
   {

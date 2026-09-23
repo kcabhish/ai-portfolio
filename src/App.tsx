@@ -1,5 +1,6 @@
 import { profile } from './data';
 import { navigation, sectionNavigation } from './data/navigation';
+import { VirtualKc } from './components/chat/VirtualKc';
 import { SiteFooter } from './components/footer/SiteFooter';
 import { MotionBackdrop } from './components/layout/MotionBackdrop';
 import { SkipLink } from './components/layout/SkipLink';
@@ -18,6 +19,7 @@ export function App() {
         <HomePage />
       </main>
       <SiteFooter profile={profile} />
+      <VirtualKc />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import type { Principle } from './types';
+import type { Principle } from './types.ts';
 
 export const principles: Principle[] = [
   {

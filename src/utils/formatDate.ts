@@ -1,4 +1,4 @@
-import type { YearMonth } from '../data/types';
+import type { YearMonth } from '../data/types.ts';
 
 const monthYear = new Intl.DateTimeFormat('en-US', {
   month: 'short',

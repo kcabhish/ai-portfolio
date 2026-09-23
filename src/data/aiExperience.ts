@@ -1,4 +1,4 @@
-import type { AiExperience } from './types';
+import type { AiExperience } from './types.ts';
 
 /** Professional AI work only. Personal or experimental work belongs in `projects.ts`. */
 export const aiExperience: AiExperience[] = [

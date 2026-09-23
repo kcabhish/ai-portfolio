@@ -1,5 +1,5 @@
-import { site } from './site';
-import type { Profile } from './types';
+import { site } from './site.ts';
+import type { Profile } from './types.ts';
 
 const resumeFileName = 'Abhishek_KC_Resume_2026.pdf';
 
@@ -36,7 +36,8 @@ export const profile: Profile = {
     },
   ],
   resume: {
-    href: `${import.meta.env.BASE_URL}${resumeFileName}`,
+    // `import.meta.env` is undefined when the chat proxy loads this module in Node.
+    href: `${import.meta.env?.BASE_URL ?? '/'}${resumeFileName}`,
     fileName: resumeFileName,
   },
 };

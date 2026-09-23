@@ -1,4 +1,4 @@
-import type { PersonalProject } from './types';
+import type { PersonalProject } from './types.ts';
 
 /**
  * Personal, experimental, and open-source projects. Kept separate from professional

@@ -1,4 +1,4 @@
-import type { Award } from './types';
+import type { Award } from './types.ts';
 
 export const awards: Award[] = [
   {

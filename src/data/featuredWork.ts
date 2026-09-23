@@ -1,4 +1,4 @@
-import type { FeaturedWork } from './types';
+import type { FeaturedWork } from './types.ts';
 
 export const featuredWork: FeaturedWork[] = [
   {
