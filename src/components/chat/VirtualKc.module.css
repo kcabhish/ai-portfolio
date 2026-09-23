@@ -127,12 +127,17 @@
 
 .assistant {
   align-self: flex-start;
+  border: 1px solid var(--color-border);
+  border-end-start-radius: var(--radius-sm);
   background: var(--color-surface-muted);
+  color: var(--color-text-primary);
 }
 
 .user {
   align-self: flex-end;
-  background: var(--color-accent-subtle);
+  border-end-end-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
 }
 
 .typing {
