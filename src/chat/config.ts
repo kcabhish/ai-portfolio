@@ -1,7 +1,7 @@
 /** Shared by the browser client and the dev/preview server proxy, so it must stay Node-safe. */
 export const chatConfig = {
   assistantName: 'Virtual KC',
-  model: 'gpt-5.6-luna',
+  model: 'gpt-5-nano',
   /** Path under the site base where the local server proxy listens. */
   proxyPath: 'api/virtual-kc',
   openAiUrl: 'https://api.openai.com/v1/chat/completions',

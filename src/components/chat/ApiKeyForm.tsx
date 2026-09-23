@@ -1,4 +1,5 @@
 import { useId, useState, type FormEvent } from 'react';
+import { ExternalLink } from '../common/ExternalLink';
 import styles from './VirtualKc.module.css';
 
 interface ApiKeyFormProps {
@@ -59,6 +60,31 @@ export function ApiKeyForm({ onSubmit, isVerifying }: ApiKeyFormProps) {
           {error}
         </p>
       )}
+      <details className={styles.keyHelp}>
+        <summary>How do I get an OpenAI API key?</summary>
+        <ol>
+          <li>
+            Sign in or create an account at{' '}
+            <ExternalLink href="https://platform.openai.com/api-keys">
+              platform.openai.com/api-keys
+            </ExternalLink>
+            .
+          </li>
+          <li>
+            Select <strong>Create new secret key</strong>, give it a name, and copy it. OpenAI only
+            shows the full key once.
+          </li>
+          <li>
+            Add a small amount of credit under <strong>Billing</strong> in your account settings;
+            the API does not work without it.
+          </li>
+          <li>Paste the key above and select Use key.</li>
+        </ol>
+        <p>
+          Tip: set a monthly usage limit in your OpenAI settings, and delete the key when you no
+          longer need it.
+        </p>
+      </details>
     </form>
   );
 }
